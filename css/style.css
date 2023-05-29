@@ -1,0 +1,98 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@500&display=swap'); */
+
+body {
+  font-family: "Playfair Display", serif !important;
+}
+
+.game-box {
+  min-height: 20rem;
+  min-width: 20rem;
+}
+
+.container {
+  height: 90vh;
+  width: 100vw;
+}
+
+.hidden-items {
+  opacity: 0;
+}
+
+.show {
+  display: block;
+  opacity: 1;
+}
+
+.game-move-img {
+  height: 5rem;
+}
+
+#comp-rock {
+  rotate: 270deg;
+  transform: scaleX(-1);
+}
+
+#user-rock {
+  rotate: 90deg;
+}
+
+#comp-paper {
+  rotate: -90deg;
+  transform: scaleX(-1);
+}
+
+#user-paper {
+  rotate: 90deg;
+}
+
+#user-scissors {
+  rotate: 360deg;
+  transform: scaleX(-1);
+}
+
+.hide {
+  display: none;
+}
+
+.display {
+  display: block;
+}
+
+.style-player1 {
+  background-color: #3a5a40;
+  color: white;
+}
+
+.style-player2 {
+  background-color: #3a5a40;
+  color: white;
+}
+
+.style-text {
+  background-color: grey;
+  color: white;
+}
+
+#winner {
+  opacity: 0;
+}
+
+.page-head {
+  color: #a3b18a;
+}
+
+.game-btn {
+  background-color: #3a5a40;
+}
+
+.game-move-btn {
+  background-color: #588157;
+}
+
+.box {
+  background-color: #dad7cd;
+}
+
+#winner {
+  color: #344e41;
+}
