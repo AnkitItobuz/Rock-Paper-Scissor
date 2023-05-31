@@ -3,10 +3,9 @@
 body {
   font-family: "Playfair Display", serif !important;
 }
-
 .game-box {
-  min-height: 20rem;
-  min-width: 20rem;
+  min-height: 9rem;
+  min-width: 9rem;
 }
 
 .container {
@@ -95,4 +94,11 @@ body {
 
 #winner {
   color: #344e41;
+}
+
+@media (min-width: 768px) {
+  .game-box {
+    min-height: 20rem;
+    min-width: 20rem;
+  }
 }

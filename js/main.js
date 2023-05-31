@@ -23,6 +23,7 @@ quitButton.addEventListener("click", () => {
   hiddenItems.forEach((Element) => {
     Element.classList.remove("show");
   });
+
   player1.classList.remove("style-player1");
   player2.classList.remove("style-player2");
   result1 = 0;
@@ -38,6 +39,7 @@ function myFunction() {
   hiddenItems.forEach((Element) => {
     Element.classList.add("show");
   });
+
   hiddenButton.forEach((Element) => {
     Element.style.display = "block";
   });
@@ -46,9 +48,11 @@ function myFunction() {
     hiddenItems.forEach((Element) => {
       Element.classList.add("show");
     });
+
     hiddenButton.forEach((Element) => {
       Element.style.display = "block";
     });
+
     result1 = 0;
     result2 = 0;
     winner.style.opacity = "0";
@@ -58,7 +62,6 @@ function myFunction() {
     player2.classList.remove("style-player2");
   });
 
-  // playBtn.removeEventListener("click", myFunction);
   playBtn.disabled = true;
 }
 
@@ -112,7 +115,10 @@ rockBtn.addEventListener("click", () => {
     hiddenButton.forEach((Element) => {
       Element.style.display = "none";
     });
-  } else if (result1 === 5) {
+
+  } 
+
+  else if (result1 === 5) {
     // user wins
     player1.classList.add("style-player1");
     winner.style.opacity = "1";
@@ -133,6 +139,7 @@ paperBtn.addEventListener("click", () => {
   userScissors.classList.remove("display");
 
   let number = generateRandom();
+
   if (number === 1) {
     // rock will come
     compRock.classList.remove("hide");
@@ -144,7 +151,7 @@ paperBtn.addEventListener("click", () => {
   }
 
   if (number === 2) {
-// paper will come
+    // paper will come
     compRock.classList.add("hide");
     compRock.classList.remove("display");
     compPaper.classList.add("display");
@@ -172,7 +179,10 @@ paperBtn.addEventListener("click", () => {
     hiddenButton.forEach((Element) => {
       Element.style.display = "none";
     });
-  } else if (result1 === 5) {
+
+  } 
+  
+  else if (result1 === 5) {
     // user wins
     player1.classList.add("style-player1");
     winner.style.opacity = "1";
@@ -193,6 +203,7 @@ scissorsBtn.addEventListener("click", () => {
   userScissors.classList.add("display");
 
   let number = generateRandom();
+
   if (number === 1) {
     // rock will come
     compRock.classList.remove("hide");
@@ -232,7 +243,10 @@ scissorsBtn.addEventListener("click", () => {
     hiddenButton.forEach((Element) => {
       Element.style.display = "none";
     });
-  } else if (result1 === 5) {
+
+  } 
+  
+  else if (result1 === 5) {
     // user wins
     player1.classList.add("style-player2");
     winner.style.opacity = "1";
@@ -248,8 +262,6 @@ scissorsBtn.addEventListener("click", () => {
 
 function generateRandom(maxLimit = 3) {
   let rand = Math.random() * maxLimit + 1;
-
   rand = parseInt(Math.floor(rand));
-  //  console.log(rand);
   return rand;
 }
