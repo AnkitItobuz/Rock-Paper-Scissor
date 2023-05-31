@@ -24,7 +24,7 @@ quitButton.addEventListener("click", () => {
     Element.classList.remove("show");
   });
   reset();
-  playBtn.addEventListener("click", myFunction);
+  playBtn.disabled=false;
 });
 
 function reset() {
@@ -54,10 +54,12 @@ function myFunction() {
     hiddenButton.forEach((Element) => {
       Element.style.display = "block";
     });
+  playBtn.disabled=false;
+
     reset();
   });
 
-  playBtn.removeEventListener("click", myFunction);
+  playBtn.disabled=true;
 }
 
 let result1 = 0;
