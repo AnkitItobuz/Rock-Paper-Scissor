@@ -64,6 +64,16 @@ function reset() {
   winner.style.opacity = "0";
   compScore.innerHTML = result2;
   userScore.innerHTML = result1;
+  userRock.classList.remove("hide");
+  userRock.classList.add("display");
+  userPaper.classList.remove("display");
+  userScissors.classList.remove("display");
+  compRock.classList.remove("hide");
+    compRock.classList.add("display");
+    compPaper.classList.remove("display");
+    compScissors.classList.remove("display");
+  playBtn.disabled = false;
+
 }
 
 rockBtn.addEventListener("click", () => {
