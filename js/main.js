@@ -64,50 +64,59 @@ function reset() {
   winner.style.opacity = "0";
   compScore.innerHTML = result2;
   userScore.innerHTML = result1;
-  userRock.classList.remove("hide");
-  userRock.classList.add("display");
-  userPaper.classList.remove("display");
-  userScissors.classList.remove("display");
-  compRock.classList.remove("hide");
-    compRock.classList.add("display");
-    compPaper.classList.remove("display");
-    compScissors.classList.remove("display");
+  userStart();
+  compStart();
   playBtn.disabled = false;
 
 }
 
-rockBtn.addEventListener("click", () => {
+function userStart() {
   userRock.classList.remove("hide");
   userRock.classList.add("display");
   userPaper.classList.remove("display");
   userScissors.classList.remove("display");
+}
 
+function compStart() {
+  compRock.classList.remove("hide");
+  compRock.classList.add("display");
+  compPaper.classList.remove("display");
+  compScissors.classList.remove("display");
+}
+
+function compSecissorDisplay() {
+  compRock.classList.add("hide");
+  compRock.classList.remove("display");
+  compPaper.classList.remove("display");
+  compScissors.classList.add("display");
+}
+
+function compPaperDisplay() {
+  compRock.classList.add("hide");
+  compRock.classList.remove("display");
+  compPaper.classList.add("display");
+  compScissors.classList.remove("display");
+}
+
+rockBtn.addEventListener("click", () => {
+  userStart();
   let number = generateRandom();
 
   if (number === 1) {
     // rock will come
-    compRock.classList.remove("hide");
-    compRock.classList.add("display");
-    compPaper.classList.remove("display");
-    compScissors.classList.remove("display");
+    compStart();
   }
 
   if (number === 2) {
     // paper will come
-    compRock.classList.add("hide");
-    compRock.classList.remove("display");
-    compPaper.classList.add("display");
-    compScissors.classList.remove("display");
+    compPaperDisplay();
     result2++;
     compScore.innerHTML = result2;
   }
 
   if (number === 3) {
     // scissors will come
-    compRock.classList.add("hide");
-    compRock.classList.remove("display");
-    compPaper.classList.remove("display");
-    compScissors.classList.add("display");
+    compSecissorDisplay();
     result1++;
     userScore.innerHTML = result1;
   }
@@ -124,7 +133,7 @@ rockBtn.addEventListener("click", () => {
       Element.style.display = "none";
     });
 
-  } 
+  }
 
   else if (result1 === 5) {
     // user wins
@@ -150,28 +159,19 @@ paperBtn.addEventListener("click", () => {
 
   if (number === 1) {
     // rock will come
-    compRock.classList.remove("hide");
-    compRock.classList.add("display");
-    compPaper.classList.remove("display");
-    compScissors.classList.remove("display");
+    compStart();
     result2++;
     compScore.innerHTML = result2;
   }
 
   if (number === 2) {
     // paper will come
-    compRock.classList.add("hide");
-    compRock.classList.remove("display");
-    compPaper.classList.add("display");
-    compScissors.classList.remove("display");
+    compPaperDisplay();
   }
 
   if (number === 3) {
     // scissors will come
-    compRock.classList.add("hide");
-    compRock.classList.remove("display");
-    compPaper.classList.remove("display");
-    compScissors.classList.add("display");
+    compSecissorDisplay();
     result1++;
     userScore.innerHTML = result1;
   }
@@ -188,8 +188,8 @@ paperBtn.addEventListener("click", () => {
       Element.style.display = "none";
     });
 
-  } 
-  
+  }
+
   else if (result1 === 5) {
     // user wins
     player1.classList.add("style-player1");
@@ -214,30 +214,21 @@ scissorsBtn.addEventListener("click", () => {
 
   if (number === 1) {
     // rock will come
-    compRock.classList.remove("hide");
-    compRock.classList.add("display");
-    compPaper.classList.remove("display");
-    compScissors.classList.remove("display");
+    compStart();
     result1++;
     userScore.innerHTML = result1;
   }
 
   if (number === 2) {
     // paper will come
-    compRock.classList.add("hide");
-    compRock.classList.remove("display");
-    compPaper.classList.add("display");
-    compScissors.classList.remove("display");
+    compPaperDisplay();
     result2++;
     compScore.innerHTML = result2;
   }
 
   if (number === 3) {
     // scissors will come
-    compRock.classList.add("hide");
-    compRock.classList.remove("display");
-    compPaper.classList.remove("display");
-    compScissors.classList.add("display");
+    compSecissorDisplay();
   }
 
   if (result2 === 5) {
@@ -252,8 +243,8 @@ scissorsBtn.addEventListener("click", () => {
       Element.style.display = "none";
     });
 
-  } 
-  
+  }
+
   else if (result1 === 5) {
     // user wins
     player1.classList.add("style-player2");
