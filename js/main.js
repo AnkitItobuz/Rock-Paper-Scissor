@@ -24,13 +24,7 @@ quitButton.addEventListener("click", () => {
     Element.classList.remove("show");
   });
 
-  player1.classList.remove("style-player1");
-  player2.classList.remove("style-player2");
-  result1 = 0;
-  result2 = 0;
-  winner.style.opacity = "0";
-  compScore.innerHTML = result2;
-  userScore.innerHTML = result1;
+  reset();
   playBtn.addEventListener("click", myFunction);
 });
 
@@ -53,13 +47,7 @@ function myFunction() {
       Element.style.display = "block";
     });
 
-    result1 = 0;
-    result2 = 0;
-    winner.style.opacity = "0";
-    compScore.innerHTML = result2;
-    userScore.innerHTML = result1;
-    player1.classList.remove("style-player1");
-    player2.classList.remove("style-player2");
+    reset();
   });
 
   playBtn.disabled = true;
@@ -67,6 +55,16 @@ function myFunction() {
 
 let result1 = 0;
 let result2 = 0;
+
+function reset() {
+  player1.classList.remove("style-player1");
+  player2.classList.remove("style-player2");
+  result1 = 0;
+  result2 = 0;
+  winner.style.opacity = "0";
+  compScore.innerHTML = result2;
+  userScore.innerHTML = result1;
+}
 
 rockBtn.addEventListener("click", () => {
   userRock.classList.remove("hide");
