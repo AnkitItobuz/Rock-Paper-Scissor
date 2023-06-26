@@ -20,8 +20,8 @@ const playAginBtn = document.getElementById("play-again-btn");
 
 // quit button
 quitButton.addEventListener("click", () => {
-  hiddenItems.forEach((Element) => {
-    Element.classList.remove("show");
+  hiddenItems.forEach((element) => {
+    element.classList.remove("show");
   });
 
   reset();
@@ -30,21 +30,21 @@ quitButton.addEventListener("click", () => {
 
 playBtn.addEventListener("click", myFunction);
 function myFunction() {
-  hiddenItems.forEach((Element) => {
-    Element.classList.add("show");
+  hiddenItems.forEach((element) => {
+    element.classList.add("show");
   });
 
-  hiddenButton.forEach((Element) => {
-    Element.style.display = "block";
+  hiddenButton.forEach((element) => {
+    element.style.display = "block";
   });
 
   playAginBtn.addEventListener("click", () => {
-    hiddenItems.forEach((Element) => {
-      Element.classList.add("show");
+    hiddenItems.forEach((element) => {
+      element.classList.add("show");
     });
 
-    hiddenButton.forEach((Element) => {
-      Element.style.display = "block";
+    hiddenButton.forEach((element) => {
+      element.style.display = "block";
     });
 
     reset();
@@ -67,7 +67,6 @@ function reset() {
   userStart();
   compStart();
   playBtn.disabled = false;
-
 }
 
 function userStart() {
@@ -129,13 +128,10 @@ rockBtn.addEventListener("click", () => {
     result1 = 0;
     result2 = 0;
 
-    hiddenButton.forEach((Element) => {
-      Element.style.display = "none";
+    hiddenButton.forEach((element) => {
+      element.style.display = "none";
     });
-
-  }
-
-  else if (result1 === 5) {
+  } else if (result1 === 5) {
     // user wins
     player1.classList.add("style-player1");
     winner.style.opacity = "1";
@@ -143,8 +139,8 @@ rockBtn.addEventListener("click", () => {
     result1 = 0;
     result2 = 0;
 
-    hiddenButton.forEach((Element) => {
-      Element.style.display = "none";
+    hiddenButton.forEach((element) => {
+      element.style.display = "none";
     });
   }
 });
@@ -184,13 +180,10 @@ paperBtn.addEventListener("click", () => {
     result1 = 0;
     result2 = 0;
 
-    hiddenButton.forEach((Element) => {
-      Element.style.display = "none";
+    hiddenButton.forEach((element) => {
+      element.style.display = "none";
     });
-
-  }
-
-  else if (result1 === 5) {
+  } else if (result1 === 5) {
     // user wins
     player1.classList.add("style-player1");
     winner.style.opacity = "1";
@@ -198,8 +191,8 @@ paperBtn.addEventListener("click", () => {
     result1 = 0;
     result2 = 0;
 
-    hiddenButton.forEach((Element) => {
-      Element.style.display = "none";
+    hiddenButton.forEach((element) => {
+      element.style.display = "none";
     });
   }
 });
@@ -239,13 +232,10 @@ scissorsBtn.addEventListener("click", () => {
     result1 = 0;
     result2 = 0;
 
-    hiddenButton.forEach((Element) => {
-      Element.style.display = "none";
+    hiddenButton.forEach((element) => {
+      element.style.display = "none";
     });
-
-  }
-
-  else if (result1 === 5) {
+  } else if (result1 === 5) {
     // user wins
     player1.classList.add("style-player2");
     winner.style.opacity = "1";
@@ -253,8 +243,8 @@ scissorsBtn.addEventListener("click", () => {
     result1 = 0;
     result2 = 0;
 
-    hiddenButton.forEach((Element) => {
-      Element.style.display = "none";
+    hiddenButton.forEach((element) => {
+      element.style.display = "none";
     });
   }
 });
